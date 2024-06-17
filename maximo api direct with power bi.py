@@ -3,7 +3,7 @@
 pip install flask, sqlalchemy, pyodbc, hdbcli, python-dotenv
 -----------------------------------------------------------------
 
-# create a file called .env
+# create a file called .env hide 4 security
 -------------------------------------------------------
 MAXIMO_DATABASE_URI=maximo_database_connection_string
 ------------------------------------------------------
