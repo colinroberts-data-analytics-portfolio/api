@@ -296,7 +296,7 @@ python create_app.py
 
 # Define parameters RangeStart and RangeEnd.
 # Apply a filter to the data:
-# M Code
+ M Code
 --------------------------------------------------------------------------------------------
  let
     Source = Json.Document(Web.Contents("http://localhost:5000/api/maximo/assets")),
