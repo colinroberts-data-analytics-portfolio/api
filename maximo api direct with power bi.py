@@ -276,7 +276,7 @@ python create_app.py
 # B) Filter Data:
 #             In the Power Query Editor, select the date/time column you want to filter by (e.g., modified_date).
 #              Apply a filter using RangeStart and RangeEnd:
-#           M   code
+          M code
  -----------------------------------------------------------------
  Table.SelectRows(your_table_name, each [modified_date] >= RangeStart and [modified_date] < RangeEnd)
 -----------------------------------------------------------------------
@@ -298,12 +298,12 @@ python create_app.py
 # Apply a filter to the data:
 # M Code
 --------------------------------------------------------------------------------------------
-# let
-     Source = Json.Document(Web.Contents("http://localhost:5000/api/maximo/assets")),
-     #"Converted to Table" = Record.ToTable(Source),
-     #"Filtered Rows" = Table.SelectRows(#"Converted to Table", each [modified_date] >= RangeStart and [modified_date] < RangeEnd)
+ let
+    Source = Json.Document(Web.Contents("http://localhost:5000/api/maximo/assets")),
+    "Converted to Table" = Record.ToTable(Source),
+    "Filtered Rows" = Table.SelectRows(#"Converted to Table", each [modified_date] >= RangeStart and [modified_date] < RangeEnd)
  in
-     #"Filtered Rows"
+    "Filtered Rows"
 ------------------------------------------------------------------------------------------------
 
 # Running and Testing
